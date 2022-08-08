@@ -1,0 +1,78 @@
+/* 
+    Reset CSS
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* 
+    Variables
+*/
+:root {
+  --hue: 0;
+  --color-dark-1: hsl(var(--hue), 100%, 20%);
+  --color-dark-2: hsl(var(--hue), 100%, 25%);
+  --color-dark-3: hsl(var(--hue), 100%, 30%);
+  --color-dark-4: hsl(var(--hue), 100%, 35%);
+  --color-dark-5: hsl(var(--hue), 100%, 40%);
+  --color-main-1: hsl(var(--hue), 100%, 45%);
+  --color-main-2: hsl(var(--hue), 100%, 50%);
+  --color-main-3: hsl(var(--hue), 100%, 55%);
+  --color-light-1: hsl(var(--hue), 100%, 60%);
+  --color-light-2: hsl(var(--hue), 100%, 65%);
+  --color-light-3: hsl(var(--hue), 100%, 70%);
+  --color-light-4: hsl(var(--hue), 100%, 75%);
+  --color-light-5: hsl(var(--hue), 100%, 80%);
+  --color-1: hsl(var(--hue), 100%, 50%);
+  --color-2: hsl(var(--hue), 100%, 50%);
+  --color-3: hsl(var(--hue), 100%, 50%);
+  --color-4: hsl(var(--hue), 100%, 50%);
+  --color-5: hsl(var(--hue), 100%, 50%);
+  -webkit-animation: teste 5s linear infinite;
+          animation: teste 5s linear infinite;
+}
+
+body {
+  display: flex;
+  background: repeating-linear-gradient(-45deg, hsl(calc(var(--hue) - 5), 100%, 50%), hsl(calc(var(--hue) + 5), 100%, 50%), hsl(calc(var(--hue) - 5), 100%, 50%) 50%);
+  background-size: 100vw 100vh;
+  animation: body-background-animation 5s linear alternate-reverse infinite;
+}
+body .container {
+  flex: 1;
+}
+
+@-webkit-keyframes body-background-animation {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes body-background-animation {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}/*# sourceMappingURL=index.css.map */
