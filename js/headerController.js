@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", onLoad);
 function onLoad() {
   setHeaderFocusController();
   setHueWithScrollInfo();
+  configureNavButton();
 }
 
 function setHeaderFocusController() {
@@ -27,4 +28,15 @@ function setHueWithScrollInfo() {
   };
   document.addEventListener("scroll", onScroll);
   onScroll();
+}
+function configureNavButton() {
+  const btn = document.querySelector("#mobile-menu-button");
+  const nav = document.querySelector("nav");
+  btn &&
+    btn.addEventListener("click", () => {
+      nav.setAttribute(
+        "show",
+        nav.getAttribute("show") == "off" ? "on" : "off"
+      );
+    });
 }

@@ -9,19 +9,70 @@ header {
   transition: all 20ms;
   z-index: 30;
 
+  #mobile-menu-button {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    background-color: transparent;
+    border: none;
+    img {
+      width: 100%;
+    }
+  }
+
   .title-container {
     span {
       color: hsl(var(--dinamic-hue), 100%, 40%);
     }
   }
+  @media (max-width: 800px) {
+    nav[show="on"] {
+      transform: translateY(0%);
+    }
+    nav {
+      transition: transform 200ms;
+      transform: translateY(-100%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      align-self: center;
+      width: 100%;
+      height: 100%;
+      max-width: 100vw;
+      background-color: hsla(var(--dinamic-hue), 80%, 95%, 0.8);
+      ul {
+        padding: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+          padding: 1rem;
+          a {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 801px) {
+    #mobile-menu-button {
+      display: none;
+    }
+    nav {
+      max-width: 600px;
+      ul {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
   nav {
     flex: 2;
-    max-width: 600px;
     ul {
       width: 100%;
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
 
       a {
         color: hsl(var(--dinamic-hue), 100%, 40%);
