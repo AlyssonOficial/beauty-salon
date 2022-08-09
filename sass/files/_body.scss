@@ -1,25 +1,25 @@
-body {
-  display: flex;
-  // background: linear-gradient(
-  //   -45deg,
-  //   hsl(var(--hue), 100%, 5%),
-  //   hsl(var(--hue), 100%, 30%),
-  //   hsl(var(--hue), 100%, 5%)
-  // );
+// body {
+//   display: flex;
+//   // background: linear-gradient(
+//   //   -45deg,
+//   //   hsl(var(--hue), 100%, 5%),
+//   //   hsl(var(--hue), 100%, 30%),
+//   //   hsl(var(--hue), 100%, 5%)
+//   // );
 
-  background: repeating-linear-gradient(
-    -45deg,
-    hsl(calc(var(--hue) - 5), 100%, 50%),
-    hsl(calc(var(--hue) + 5), 100%, 50%),
-    hsl(calc(var(--hue) - 5), 100%, 50%) 50%
-  );
-  background-size: 100vw 100vh;
-  animation: body-background-animation 5s linear alternate-reverse infinite;
+//   background: repeating-linear-gradient(
+//     -45deg,
+//     hsl(calc(var(--hue) - 5), 100%, 50%),
+//     hsl(calc(var(--hue) + 5), 100%, 50%),
+//     hsl(calc(var(--hue) - 5), 100%, 50%) 50%
+//   );
+//   background-size: 100vw 100vh;
+//   animation: body-background-animation 5s linear alternate-reverse infinite;
 
-  .container {
-    flex: 1;
-  }
-}
+//   .container {
+//     flex: 1;
+//   }
+// }
 
 @keyframes body-background-animation {
   from {

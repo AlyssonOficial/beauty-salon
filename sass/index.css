@@ -49,16 +49,6 @@ li {
           animation: teste 5s linear infinite;
 }
 
-body {
-  display: flex;
-  background: repeating-linear-gradient(-45deg, hsl(calc(var(--hue) - 5), 100%, 50%), hsl(calc(var(--hue) + 5), 100%, 50%), hsl(calc(var(--hue) - 5), 100%, 50%) 50%);
-  background-size: 100vw 100vh;
-  animation: body-background-animation 5s linear alternate-reverse infinite;
-}
-body .container {
-  flex: 1;
-}
-
 @-webkit-keyframes body-background-animation {
   from {
     background-position: 0% 50%;
@@ -75,4 +65,35 @@ body .container {
   to {
     background-position: 100% 50%;
   }
+}
+header {
+  width: 100%;
+  display: flex;
+  background-color: hsla(var(--dinamic-hue), 100%, 50%, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  transition: all 20ms;
+}
+header .title-container span {
+  color: hsl(var(--dinamic-hue), 100%, 50%);
+}
+header nav {
+  flex: 2;
+  max-width: 600px;
+}
+header nav ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+header[focus=on] {
+  height: 12vh;
+}
+
+main section {
+  height: 100vh;
+  outline: red 1px solid;
 }/*# sourceMappingURL=index.css.map */
