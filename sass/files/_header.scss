@@ -1,16 +1,17 @@
 header {
   width: 100%;
   display: flex;
-  background-color: hsla(var(--dinamic-hue), 100%, 50%, 0.1);
+  background-color: hsla(var(--dinamic-hue), 80%, 95%, 1);
   align-items: center;
-  //   padding: 0 1.5vw;
+  padding: 0 5vw;
   justify-content: space-between;
   position: fixed;
   transition: all 20ms;
+  z-index: 30;
 
   .title-container {
     span {
-      color: hsl(var(--dinamic-hue), 100%, 50%);
+      color: hsl(var(--dinamic-hue), 100%, 40%);
     }
   }
   nav {
@@ -21,6 +22,33 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+
+      a {
+        color: hsl(var(--dinamic-hue), 100%, 40%);
+        text-decoration: none;
+        position: relative;
+        font-size: 1.3rem;
+        font-weight: bold;
+
+        &:hover {
+          color: hsl(var(--dinamic-hue), 100%, 20%);
+        }
+
+        &::before {
+          content: "";
+          height: 0.2rem;
+          width: 100%;
+          position: absolute;
+          top: 1.3rem;
+          background-color: hsl(var(--dinamic-hue), 100%, 40%);
+          transform: scaleX(0);
+        }
+      }
+      a[selected="on"] {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
     }
   }
 }

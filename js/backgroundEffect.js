@@ -51,7 +51,7 @@ function onLoad() {
         new BackgroundItem(BackgroundItem.Random(0, ctx.canvas.width))
       );
       backgroundData.createdAt = Date.now();
-      backgroundData.nextCreation = BackgroundItem.Random(100, 800);
+      backgroundData.nextCreation = BackgroundItem.Random(800, 5000);
     }
     for (const bgItem of backgroundData.itens) {
       bgItem.useEffect();

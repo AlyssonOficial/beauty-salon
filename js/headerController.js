@@ -22,8 +22,8 @@ function setHueWithScrollInfo() {
       document.documentElement.scrollTop /
       (document.documentElement.scrollHeight -
         document.documentElement.offsetHeight);
-    const dinamicHue = dinamicHuePercent * 360;
-    root.style.setProperty("--dinamic-hue", dinamicHue.toFixed(0));
+    const dinamicHue = dinamicHuePercent * ((360 / 9) * 8);
+    root.style.setProperty("--dinamic-hue", dinamicHue.toFixed(0) + "deg");
   };
   document.addEventListener("scroll", onScroll);
   onScroll();

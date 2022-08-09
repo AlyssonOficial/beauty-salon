@@ -1,0 +1,20 @@
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsla(var(--dinamic-hue), 100%, 95%, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsla(var(--dinamic-hue), 100%, 20%, 1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(var(--dinamic-hue), 100%, 30%, 1);
+}
